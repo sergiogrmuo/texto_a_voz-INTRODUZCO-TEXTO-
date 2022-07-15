@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Permanent Marker', cursive;
+    color: whitesmoke;
+    background: rgb(17, 17, 17);
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 60px;
+    text-align: center;
+    color: #0f0;
+}
+
+h1:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    cursor: pointer;
+}
+
+label {
+    color: #0f0;
+    font-size: 20px;
+}
+
+label:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    cursor: pointer;
+}
+
+
+/* formato botón y animación */
+
+button {
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    display: inline-block;
+    padding: 15px 24px;
+    outline: none;
+    border: 2px solid #0f0;
+    margin: 40px;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #0f0;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: 0.45s;
+    transition-delay: 0s;
+}
+
+button:hover {
+    transition-delay: 1.5s;
+    color: #000;
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 100px #0f0;
+}
+
+button span {
+    position: relative;
+    z-index: 100;
+    font-family: 'Permanent Marker', cursive;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0, 5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+button:hover::before {
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #0f0, 5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: -5px -8px 0 #0f0, -5px 8px 0 #0f0;
+    transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+button:hover::after {
+    width: 60%;
+    height: 102%;
+    right: -2px;
+    box-shadow: -5px 0 0 #0f0, -5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+
+/* Formato del select */
+
+.selector {
+    margin: 10px auto 40px auto;
+    border: 2px solid #0f0;
+    height: 30px;
+    overflow: hidden;
+    width: 230px;
+    position: relative;
+}
+
+.selector:hover {
+    -webkit-box-shadow: 27px 10px 17px 5px rgba(0, 255, 0, 0.58);
+    box-shadow: 27px 10px 17px 5px rgba(0, 255, 0, 0.58);
+}
+
+select {
+    background: transparent;
+    color: #0f0;
+    border: none;
+    font-size: 16px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.selector::after {
+    content: "\025be";
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    display: table-cell;
+    /* padding-top: 0px; */
+    padding-bottom: 2px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: #0f0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+
+/* Formato textarea */
+
+#mensaje {
+    width: 500px;
+    min-height: 200px;
+    height: auto;
+    border: 2px solid #0f0;
+    background-color: black;
+    color: #0f0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#mensaje:hover {
+    -webkit-box-shadow: 27px 17px 17px -5px rgba(0, 255, 0, 0.58);
+    box-shadow: 27px 17px 17px -5px rgba(0, 255, 0, 0.58);
+}
